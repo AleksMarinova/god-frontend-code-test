@@ -5,7 +5,9 @@ import React from "react";
 function HomePage() {
   return (
     <React.StrictMode>
-      <HelloWorld />
+      <HelloWorld props={{
+        cars: []
+      }} />
     </React.StrictMode>
   );
 }
