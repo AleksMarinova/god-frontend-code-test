@@ -66,10 +66,41 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 30%;
+  margin-top: 25%;
 }
 
 .filter{
   width: 50%;
   margin-bottom: 3rem;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+}
+
+.link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.link a span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
