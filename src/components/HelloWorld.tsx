@@ -45,6 +45,7 @@ export const CarsContainer: FC<iProps> = () => {
           flexDirection: "row",
           justifyContent: "center",
           alignContent: "center",
+          flexWrap: "wrap",
           width: "100%",
           gap: "2rem",
           padding: "3rem",

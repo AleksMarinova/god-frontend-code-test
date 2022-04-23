@@ -6,14 +6,19 @@ import { iCarCardProps } from "../../interfaces";
 const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
   const { car } = props;
   return (
-    <Card key={car.id}>
-      <CardContent>
-        <Flex>
+    <Card key={car.id} >
+      <CardContent >
+        <Flex extend={{
+          justifyContent: "space-between",
+         padding: "0",
+         margin: "0"
+        }} >
           <Text>{car.modelType}</Text>
           <Spacer />
-          <Text subStyle={"emphasis"}>{car.modelName}</Text>
+          <Text subStyle={"emphasis"}
+          >{car.modelName}</Text>
           <Spacer />
-          <Text>{car.modelType}</Text>
+          <Text>{car.bodyType}</Text>
         </Flex>
       </CardContent>
       <Image
