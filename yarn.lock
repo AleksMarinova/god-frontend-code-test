@@ -1345,6 +1345,18 @@
     "minimalistic-assert" "^1.0.1"
     "minimalistic-crypto-utils" "^1.0.1"
 
+"embla-carousel-react@^6.2.0":
+  "integrity" "sha512-XshB7pmmhso/fzENefflWw5/N3HqCjO8H5CkzQxuCQqV9w+bvEaBkjUZ6fxfqLUMMSKFWIQvMD6uo9f8oKS+2g=="
+  "resolved" "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-6.2.0.tgz"
+  "version" "6.2.0"
+  dependencies:
+    "embla-carousel" "6.2.0"
+
+"embla-carousel@6.2.0":
+  "integrity" "sha512-dSNsiQ7nmSQJZgbYfZCLdzrnznHwpaAcdJFcMRKgm/pjH1doOgxmfsvlMy4VfO4J11hLz8jm/W8WxSSDqfuu4w=="
+  "resolved" "https://registry.npmjs.org/embla-carousel/-/embla-carousel-6.2.0.tgz"
+  "version" "6.2.0"
+
 "emoji-regex@^8.0.0":
   "integrity" "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
   "resolved" "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"

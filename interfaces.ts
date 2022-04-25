@@ -1,6 +1,6 @@
 export interface iProps {
   props: {
-    cars: {}[];
+    cars: iCar[];
   };
 }
 
@@ -14,4 +14,8 @@ export interface iCar {
 
 export interface iCarCardProps {
   car: iCar
+}
+
+export interface iCarouselProps {
+  cars: iCar[]
 }

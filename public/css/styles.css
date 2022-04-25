@@ -1,63 +1,50 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
-html, body {
-  height: 100%;
+
+html,
+body {
+  height: 100vh;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: rgb(250,250,250);
 }
-/*
-  6. Improve media defaults
-*/
-img, picture, video, canvas, svg {
+
+img,
+svg {
   display: block;
   max-width: 100%;
 }
-/*
-  7. Remove built-in form typography styles
-*/
-input, button, textarea, select {
+
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-/*
-  8. Avoid text overflows
-*/
-p, h1, h2, h3, h4, h5, h6 {
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
 
-.cars-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+#root,
+#__next {
+  isolation: isolate;
 }
 
 main {
@@ -65,11 +52,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-top: 25%;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 2rem;
 }
 
-.filter{
+.filter {
   width: 50%;
   margin-bottom: 3rem;
 }
@@ -80,7 +68,8 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1rem;
+  gap: 3rem;
+
 }
 
 .link {
@@ -88,7 +77,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 35%;
+  width: 30%;
 }
 
 .link a {
@@ -96,17 +85,56 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.link a span {
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  min-width: 300px;
+  max-width: 30%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top:20%;
+}
+
+/* .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
+} */
+
+header {
+  margin-top: 15rem;
 }
 
-.car-card{
+.card-info__model {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: left;
+  justify-content: left;
+  width: 100%;
+  gap: 0.5rem;
 }
+
+
+

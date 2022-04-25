@@ -1,45 +1,45 @@
 import { FC } from "react";
-import { Card, CardContent, Flex, Text, Spacer, Link } from "vcc-ui";
+import { Text, Link } from "vcc-ui";
 import Image from "next/image";
 import { iCarCardProps } from "../../interfaces";
+import arrowLink from "../../docs/chevron-small.svg";
 
 const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
   const { car } = props;
+
   return (
-    <Card key={car.id} >
-      <CardContent >
-        <Flex extend={{
-          justifyContent: "space-between",
-         padding: "0",
-         margin: "0"
-        }} >
-          <Text>{car.modelType}</Text>
-          <Spacer />
-          <Text subStyle={"emphasis"}
-          >{car.modelName}</Text>
-          <Spacer />
-          <Text>{car.bodyType}</Text>
-        </Flex>
-      </CardContent>
+    <div key={car.id} className="card-wrapper">
+      <div className="card-info">
+      <Text subStyle='inline-link' >{car.bodyType.toLocaleUpperCase()}</Text>
+      <div className="card-info__model" >
+      <Text subStyle='emphasis'><b>{car.modelName}</b></Text> 
+      <Text subStyle="inline-link">{car.modelType}</Text>
+      </div>
+       
+        
+      </div>
       <Image
         src={car.imageUrl}
         alt={car.modelName}
-        height="300px"
-        width="300px"
+        height="400px"
+        width="500px"
       ></Image>
       <div className="links-container">
         <div className="link">
-          <Link href={`/learn/${car.id}`} arrow={"right"}>
+          <Link href={`/learn/${car.id}`} >
             LEARN
+            <Image src={arrowLink}  alt='learn-more-icon'
+            ></Image>
           </Link>
         </div>
         <div className="link">
-          <Link href={`/shop/${car.id}`} arrow={"right"}>
+          <Link href={`/shop/${car.id}`} >
             SHOP
+            <Image src={arrowLink}  alt='learn-more-icon'/>
           </Link>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
