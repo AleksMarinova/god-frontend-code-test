@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, Link } from "vcc-ui";
+import { Text, Link, Icon } from "vcc-ui";
 import Image from "next/image";
 import { iCarCardProps } from "../../interfaces";
 import arrowLink from "../../docs/chevron-small.svg";
@@ -28,14 +28,13 @@ const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
         <div className="link">
           <Link href={`/learn/${car.id}`} >
             LEARN
-            <Image src={arrowLink}  alt='learn-more-icon'
-            ></Image>
+            <Icon type="navigation-chevronforward-12" />
           </Link>
         </div>
         <div className="link">
           <Link href={`/shop/${car.id}`} >
             SHOP
-            <Image src={arrowLink}  alt='learn-more-icon'/>
+            <Icon type="navigation-chevronforward-12" />
           </Link>
         </div>
       </div>
