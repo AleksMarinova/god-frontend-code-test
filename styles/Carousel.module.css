@@ -10,8 +10,8 @@
 }
 .embla__slide {
   position: relative;
-  flex: 1 1 80%;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center; 
-  /* max-width: 300px; */
+  max-width: 300px;
 }
