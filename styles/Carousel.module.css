@@ -3,6 +3,7 @@
   width: 100%;
   max-width:1440px;
 }
+
 .embla__container {
   display: flex;
   height: 100%;
@@ -14,4 +15,28 @@
   display: flex;
   justify-content: center; 
   max-width: 300px;
+}
+
+.embla__slide:last-child {
+  margin-right: 20px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.embla__next{
+  border:none;
+  background-color: transparent;
+}
+
+.embla__prev{
+  border:none;
+  background-color: transparent;
 }
