@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import cars from "../../public/api/cars.json";
 import { Flex, SelectInput } from "vcc-ui";
-import CarCard from "./CarCard";
-import CarCarousel from "./Carousel";
+import dynamic from "next/dynamic";
+const CarCarousel = dynamic(() => import("./Carousel"), { ssr: false });
 import { iCar, iProps } from "../../interfaces";
 import styles from "../../styles/Home.module.css";
 
