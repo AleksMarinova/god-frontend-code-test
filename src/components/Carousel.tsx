@@ -15,7 +15,7 @@ const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(0);
   const breakpoint = 500;
 
   const scrollTo = useCallback(
