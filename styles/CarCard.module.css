@@ -24,6 +24,10 @@
   gap: 0.5rem;
 }
 
+.image {
+  margin-top: 1rem;
+}
+
 .linksContainer {
   display: flex;
   flex-direction: row;
@@ -31,7 +35,6 @@
   justify-content: center;
   width: 100%;
   gap: 2rem;
-
 }
 
 .link {
@@ -49,4 +52,3 @@
   justify-content: center;
   gap: 0.2rem;
 }
-

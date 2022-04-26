@@ -33,7 +33,7 @@ const CarsContainer: FC<iProps> = () => {
         >
           <option value="">All</option>
           {uniqueCarBodyTypes.map((bodyType, i) => (
-            <option key={i} value={bodyType} label={bodyType} >
+            <option key={i} value={bodyType} label={bodyType}>
               {bodyType}
             </option>
           ))}
@@ -54,7 +54,6 @@ const CarsContainer: FC<iProps> = () => {
       >
         <CarCarousel cars={displayedCars} />
       </Flex>
-      
     </div>
   );
 };

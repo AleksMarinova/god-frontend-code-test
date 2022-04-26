@@ -1,13 +1,13 @@
-import { Icon } from 'vcc-ui';
-import styles from '../../styles/Arrows.module.css';
-import { FC } from 'react';
+import { Icon } from "vcc-ui";
+import styles from "../../styles/Arrows.module.css";
+import { FC } from "react";
 
-interface iArrowsProps{
-  scrollPrev: () => void,
-  scrollNext: () => void,
+interface iArrowsProps {
+  scrollPrev: () => void;
+  scrollNext: () => void;
 }
 
-const Arrows:FC<iArrowsProps>= ({ scrollPrev, scrollNext }) => {
+const Arrows: FC<iArrowsProps> = ({ scrollPrev, scrollNext }) => {
   return (
     <div className={styles.container}>
       <button className={styles.embla__prev} onClick={scrollPrev}>

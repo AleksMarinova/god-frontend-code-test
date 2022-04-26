@@ -4,9 +4,9 @@ import logo from "../../public/images/logo.png";
 
 const Header = () => {
   return (
-        <header>
-          <Image src={logo} alt="logo" width="140px" height="100px" />
-        </header>
+    <header>
+      <Image src={logo} alt="logo" width="140px" height="100px" />
+    </header>
   );
 };
 export default Header;

@@ -10,7 +10,9 @@ const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
   return (
     <div key={car.id} className={styles.wrapper}>
       <div className={styles.info}>
-        <Text subStyle="inline-link">{car.bodyType.toLocaleUpperCase()}</Text>
+        <Text subStyle="inline-link">
+          <b>{car.bodyType.toLocaleUpperCase()}</b>
+        </Text>
         <div className={styles.modelInfo}>
           <Text subStyle="emphasis">
             <b>{car.modelName}</b>
@@ -18,23 +20,26 @@ const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
           <Text subStyle="inline-link">{car.modelType}</Text>
         </div>
       </div>
-      <Image
-        src={car.imageUrl}
-        alt={car.modelName}
-        height="400px"
-        width="500px"
-      ></Image>
+      <div className={styles.image}>
+        <Image
+          src={car.imageUrl}
+          alt={car.modelName}
+          height="400px"
+          width="500px"
+          className={styles.image}
+        ></Image>
+      </div>
       <div className={styles.linksContainer}>
         <div className={styles.link}>
           <Link href={`/learn/${car.id}`}>
             LEARN
-            <Icon type="navigation-chevronforward-12" />
+            <Icon type="navigation-chevronforward-12" color="action" />
           </Link>
         </div>
         <div className={styles.link}>
           <Link href={`/shop/${car.id}`}>
             SHOP
-            <Icon type="navigation-chevronforward-12" />
+            <Icon type="navigation-chevronforward-12" color="action" />
           </Link>
         </div>
       </div>

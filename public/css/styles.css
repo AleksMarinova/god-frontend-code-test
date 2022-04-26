@@ -16,11 +16,10 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: rgb(250,250,250);
+  background-color: rgb(250, 250, 250);
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -30,21 +29,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
 }
 
 main {
@@ -60,7 +44,3 @@ main {
 header {
   margin-top: 15rem;
 }
-
-
-
-
