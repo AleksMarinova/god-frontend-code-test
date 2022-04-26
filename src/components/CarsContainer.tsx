@@ -3,10 +3,10 @@ import cars from "../../public/api/cars.json";
 import { Flex, SelectInput } from "vcc-ui";
 import dynamic from "next/dynamic";
 const CarCarousel = dynamic(() => import("./Carousel"), { ssr: false });
-import { iCar, iProps } from "../../interfaces";
-import styles from "../../styles/Home.module.css";
+import { iProps } from "../../interfaces";
+import styles from "../../styles/CarsContainer.module.css";
 
-export const CarsContainer: FC<iProps> = () => {
+const CarsContainer: FC<iProps> = () => {
   const [displayedCars, setDisplayedCars] = useState(cars);
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -24,8 +24,8 @@ export const CarsContainer: FC<iProps> = () => {
     .filter((bodyType, index, self) => self.indexOf(bodyType) === index);
 
   return (
-    <div className="main-content">
-      <div className="filter">
+    <div className={styles.container}>
+      <div className={styles.filter}>
         <SelectInput
           label="Body Type"
           name="Car Body Type"
@@ -58,3 +58,5 @@ export const CarsContainer: FC<iProps> = () => {
     </div>
   );
 };
+
+export default CarsContainer;

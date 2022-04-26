@@ -3,9 +3,8 @@ import { iCarouselProps } from "../../interfaces";
 import { FC, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "../../styles/Carousel.module.css";
-import Image from "next/image";
-import Buttons from "./Buttons";
-import { Icon } from "vcc-ui";
+import Arrows from "./Arrows";
+import Dots from "./Dots";
 import { useEffect, useState } from "react";
 
 const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
@@ -56,37 +55,6 @@ const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
 
-  const Arrows = () => {
-    return (
-      <div className={styles.buttonsContainer}>
-        <button className={styles.embla__prev} onClick={scrollPrev}>
-          <Icon type="media-previous-32" />
-        </button>
-        <button className={styles.embla__next} onClick={scrollNext}>
-          <Icon type="media-next-32" />
-        </button>
-      </div>
-    );
-  };
-
-  const Dots = () => {
-    return (
-      <div className={styles.dotsContainer}>
-        {cars.map((car, index) => {
-          return (
-            <button
-              key={car.id}
-              className={`${styles.dot} ${
-                index === selectedIndex ? styles.dotActive : ""
-              }`}
-              onClick={() => scrollTo(index)}
-            />
-          );
-        })}
-      </div>
-    );
-  };
-
   return (
     <div className={styles.embla}>
       <div className="embla__viewport" ref={emblaRef}>
@@ -100,7 +68,11 @@ const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
           })}
         </div>
 
-        {width > breakpoint ? <Arrows /> : <Dots />}
+        {width > breakpoint ? (
+          <Arrows scrollPrev={scrollPrev} scrollNext={scrollNext} />
+        ) : (
+          <Dots cars={cars} selectedIndex={selectedIndex} scrollTo={scrollTo} />
+        )}
       </div>
     </div>
   );
