@@ -56,7 +56,7 @@ const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
   }, [emblaApi]);
 
   return (
-    <div className={styles.embla}>
+    <section className={styles.embla}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className={styles.embla__container}>
           {cars.map((car) => {
@@ -74,7 +74,7 @@ const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
           <Dots cars={cars} selectedIndex={selectedIndex} scrollTo={scrollTo} />
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

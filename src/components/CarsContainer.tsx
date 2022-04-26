@@ -24,7 +24,7 @@ const CarsContainer: FC<iProps> = () => {
     .filter((bodyType, index, self) => self.indexOf(bodyType) === index);
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.filter}>
         <SelectInput
           label="Body Type"
@@ -54,7 +54,7 @@ const CarsContainer: FC<iProps> = () => {
       >
         <CarCarousel cars={displayedCars} />
       </Flex>
-    </div>
+    </section>
   );
 };
 

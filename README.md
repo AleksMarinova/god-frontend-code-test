@@ -1,46 +1,24 @@
 # Volvo Cars (Global Online Digital)
-
 ## Front-end coding test (React)
 
-Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
+### Objectives
+Recreate a responsive carousel from a mock using Next.js and Typescript
+[Live Demo](https://god-frontend-code-test-aleksmarinova.vercel.app/)
+## Technologies 
+- Typesctipt
+- Next.js
+- VCC-UI
+- Embla Carousel
 
-Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
+## Reflections
+It was interesting working with VCC-UI library and implementing Embla carousel with Typescript. I would have liked to build a custom carousel component, but due to time constraints and Embla being React and Typescript friendly, it didn't seem necessary.
 
-### Desktop
+Since Webpack bundles the json file at build time, there was no need to use GetStaticProps.
 
-![ProductListDesktop](./docs/ProductList-Desktop.png)
+The size of the project didn't justify the usage of state managers, so I chose to prop drill state from Filter to Card container to CarCard.
 
-### Mobile
+I build my own card component, because the Card element from VCC-UI was not built using semantic HTML, which was one of the requirements.
 
-![ProductListDesktop](./docs/ProductList-Mobile.png)
+I also used an Icon for the aroow link, because the arrow propery on the VCC Link component had some extra whitespace that was breaking the design.
 
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this:
-
-```json
-[
-  {
-    "id": "xc90-recharge",
-    "modelName": "XC90 Recharge",
-    "bodyType": "suv",
-    "modelType": "plug-in hybrid",
-    "imageUrl": "/images/xc90_recharge.jpg"
-  }
-]
-```
-
-The product owner is telling you that you can generate the links to the learn and shop pages of each car by concatating the `id` of the car to the learn (`/learn/`) and shop (`/shop/`) urls.
-
-Two extra SVG icons are also provided by our designer which are stored under `docs` folder.
-
-## Requirements
-
-- The project is bootstraped using [Next.js](https://nextjs.org/).
-- Browser support is modern ever-green browsers.
-- Implement this design using React and Typescript.
-- Accessibility is important.
-- Code Structure and reusablity is important.
-
-## Bonus Points:
-
-- If you use our design system component library, [VCC-UI](https://vcc-ui.vercel.app/)
-- If you add a filter bar on the top to filter cars by `bodyType`
+Overall, the code structure is reusable and browser support is carried to all browsers.

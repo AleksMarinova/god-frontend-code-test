@@ -8,7 +8,7 @@ const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
   const { car } = props;
 
   return (
-    <div key={car.id} className={styles.wrapper}>
+    <article key={car.id} className={styles.wrapper}>
       <div className={styles.info}>
         <Text subStyle="inline-link">
           <b>{car.bodyType.toLocaleUpperCase()}</b>
@@ -43,7 +43,7 @@ const CarCard: FC<iCarCardProps> = (props: iCarCardProps) => {
           </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
