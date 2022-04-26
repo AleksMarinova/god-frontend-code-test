@@ -21,6 +21,6 @@ The size of the project didn't justify the usage of state managers, so I chose t
 
 I build my own card component, because the Card element from VCC-UI was not built using semantic HTML, which was one of the requirements.
 
-I also used an Icon for the aroow link, because the arrow propery on the VCC Link component had some extra whitespace that was breaking the design.
+I also used an Icon for the arrow link, because the arrow propery on the VCC Link component had some extra whitespace that was breaking the design.
 
 Overall, the code structure is reusable and browser support is carried to all browsers.
