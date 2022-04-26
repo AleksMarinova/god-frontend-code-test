@@ -3,6 +3,8 @@
 
 ### Objectives
 Recreate a responsive carousel from a mock using Next.js and Typescript
+
+
 [Live Demo](https://god-frontend-code-test-aleksmarinova.vercel.app/)
 ## Technologies 
 - Typesctipt
