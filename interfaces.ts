@@ -19,3 +19,14 @@ export interface iCarCardProps {
 export interface iCarouselProps {
   cars: iCar[]
 }
+
+export interface iArrowsProps {
+  scrollPrev: () => void;
+  scrollNext: () => void;
+}
+
+export interface iDotsProps {
+  selectedIndex: number;
+  scrollTo: (index: number) => void;
+  cars: iCar[];
+}

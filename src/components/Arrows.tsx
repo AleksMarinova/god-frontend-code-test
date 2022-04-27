@@ -1,11 +1,9 @@
 import { Icon } from "vcc-ui";
 import styles from "../../styles/Arrows.module.css";
 import { FC } from "react";
+import { iArrowsProps } from "../../interfaces";
 
-interface iArrowsProps {
-  scrollPrev: () => void;
-  scrollNext: () => void;
-}
+
 
 const Arrows: FC<iArrowsProps> = ({ scrollPrev, scrollNext }) => {
   return (

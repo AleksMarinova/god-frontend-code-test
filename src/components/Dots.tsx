@@ -1,12 +1,7 @@
 import { FC } from "react";
-import { iCar } from "../../interfaces";
 import styles from "../../styles/Dots.module.css";
+import { iDotsProps } from "../../interfaces";
 
-interface iDotsProps {
-  selectedIndex: number;
-  scrollTo: (index: number) => void;
-  cars: iCar[];
-}
 
 const Dots: FC<iDotsProps> = ({ cars, selectedIndex, scrollTo }) => {
   return (
