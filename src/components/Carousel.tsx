@@ -1,11 +1,10 @@
 import CarCard from "./CarCard";
 import { iCarouselProps } from "../../interfaces";
-import { FC, useCallback } from "react";
+import { FC, useCallback, useEffect, useState  } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "../../styles/Carousel.module.css";
 import Arrows from "./Arrows";
 import Dots from "./Dots";
-import { useEffect, useState } from "react";
 
 const CarCarousel: FC<iCarouselProps> = ({ cars }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
